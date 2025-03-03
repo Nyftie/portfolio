@@ -1,11 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 :root {
-  --main-bg-color: #fff; 
+  --main-bg-color: #fff;
   --main-text-color: #23192B;
   --lilac: #C6A9C1;
   --corail: #E3786A;
@@ -31,21 +31,21 @@
   font-weight: bold;
 }
 
-html, body {
-  height: 100%; /* Ensures full page height */
+html,
+body {
   margin: 0;
-  display: flex;
   flex-direction: column;
 }
 
 .main-content {
-  flex: 1; /* Pushes footer to the bottom */
+  flex: 1;
+  /* Pushes footer to the bottom */
 }
 
 .btn {
   display: inline-block;
   padding: 20px 50px;
-  background-color:var(--ochre);
+  background-color: var(--ochre);
   color: var(--main-text-color);
   border-radius: var(--Corner-Full);
   border: none;
@@ -62,7 +62,7 @@ html, body {
   background-color: var(--main-text-color);
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -76,33 +76,40 @@ a:hover {
 
 nav {
   display: flex;
-  justify-content: space-between; /* Pushes logo left, links right */
-  align-items: center; /* Aligns items vertically */
-  padding: 10px 20px; /* Adds padding */
+  justify-content: space-between;
+  /* Pushes logo left, links right */
+  align-items: center;
+  /* Aligns items vertically */
+  padding: 10px 20px;
+  /* Adds padding */
 }
 
 .navlinks {
   display: flex;
-  gap: 20px; /* Adds space between items */
-  list-style: none; /* Removes bullet points */
+  gap: 20px;
+  /* Adds space between items */
+  list-style: none;
+  /* Removes bullet points */
   padding: 0;
   margin: 0;
 }
 
 .navlinks li {
   display: flex;
-  align-items: center; /* Aligns icons and text */
+  align-items: center;
+  /* Aligns icons and text */
 }
 
 ul.navlinks a {
   text-decoration: none;
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margins */
+  padding: 0;
+  margin: 0;
   display: flex;
   align-items: center;
-  gap: 5px; 
+  gap: 0.35vw;
   font-family: 'Quicksand';
   font-weight: bold;
+  font-size: 1.2vw;
   color: var(--main-text-color);
 }
 
@@ -118,15 +125,19 @@ ul.navlinks a:hover {
   0% {
     transform: rotate(0deg) scale(1);
   }
+
   25% {
     transform: rotate(90deg) scale(1.2);
   }
+
   50% {
     transform: rotate(180deg) scale(1.5);
   }
+
   75% {
     transform: rotate(270deg) scale(1.2);
   }
+
   100% {
     transform: rotate(360deg) scale(1);
   }
@@ -138,22 +149,39 @@ ul.navlinks a:hover {
 
 .logo {
   display: flex;
-  align-items: center;  /* Aligns items vertically */
-  text-decoration: none; /* Removes default underline */
-  gap: 10px;  /* Adds spacing between logo and text */
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
 }
 
 .logo img {
-  width: 90px;  /* Adjust size as needed */
+  width: 90px;
+  /* Adjust size as needed */
   height: auto;
 }
 
 .logo h1 {
   font-family: 'Leckerli One';
   color: var(--main-text-color);
-  font-size: 36px;  /* Adjust font size */
-  margin: 0; /* Removes extra spacing */
-  white-space: nowrap; /* Prevents text from wrapping */
+  font-size: 36px;
+  /* Adjust font size */
+  margin: 0;
+  /* Removes extra spacing */
+  white-space: nowrap;
+  /* Prevents text from wrapping */
+}
+
+#btnbienvenue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 6.94vw;
+}
+
+footer {
+  position: relative;
 }
 
 .footer {
@@ -195,11 +223,14 @@ ul.navlinks a:hover {
   flex-direction: column;
   align-items: center;
   gap: -150px;
-
-  height: auto; /* Maintains aspect ratio */
+  height: auto;
+  /* Maintains aspect ratio */
 }
 
-.container {  display: grid;
+.container {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 3/2;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
@@ -211,50 +242,257 @@ ul.navlinks a:hover {
     "C19 C20 C21 C22 C23 C24";
 }
 
-.C1 { grid-area: C1; }
+.container > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.C2 { grid-area: C2; }
+.container > div img {
+  width: 100%;
+}
 
-.C3 { grid-area: C3; }
+.C1 {
+  grid-area: C1;
+  background-color: var(--offwhite);
+}
 
-.C4 { grid-area: C4; }
+.C2 {
+  grid-area: C2;
+  background-color: var(--main-text-color)
+}
 
-.C5 { grid-area: C5; }
+.C3 {
+  grid-area: C3;
+  background-color: var(--offwhite);
+}
 
-.C6 { grid-area: C6; }
+.C4 {
+  grid-area: C4;
+  background-color: var(--main-text-color)
+}
 
-.C7 { grid-area: C7; }
+.C5 {
+  grid-area: C5;
+  background-color: var(--offwhite);
+}
 
-.C8 { grid-area: C8; }
+.C6 {
+  grid-area: C6;
+  background-color: var(--main-text-color)
+}
 
-.C9 { grid-area: C9; }
+.C7 {
+  grid-area: C7;
+  background-color: var(--main-text-color)
+}
 
-.C10 { grid-area: C10; }
+.C8 {
+  grid-area: C8;
+  background-color: var(--offwhite)
+}
 
-.C11 { grid-area: C11; }
+.C9 {
+  grid-area: C9;
+  background-color: var(--main-text-color)
+}
 
-.C12 { grid-area: C12; }
+.C10 {
+  grid-area: C10;
+  background-color: var(--offwhite)
+}
 
-.C13 { grid-area: C13; }
+.C11 {
+  grid-area: C11;
+  background-color: var(--main-text-color)
+}
 
-.C14 { grid-area: C14; }
+.C12 {
+  grid-area: C12;
+  background-color: var(--offwhite)
+}
 
-.C15 { grid-area: C15; }
+.C13 {
+  grid-area: C13;
+  background-color: var(--offwhite)
+}
 
-.C16 { grid-area: C16; }
+.C14 {
+  grid-area: C14;
+  background-color: var(--main-text-color)
+}
 
-.C17 { grid-area: C17; }
+.C15 {
+  grid-area: C15;
+  background-color: var(--offwhite)
+}
 
-.C18 { grid-area: C18; }
+.C16 {
+  grid-area: C16;
+  background-color: var(--main-text-color);
+  color: var(--offwhite);
+  font-family: 'Quicksand';
+  font-size: 2.8vw;
+}
 
-.C19 { grid-area: C19; }
+.C16 h2 {
+  height: fit-content;
+}
 
-.C20 { grid-area: C20; }
+.C17 {
+  grid-area: C17;
+  background-color: var(--offwhite);
+}
 
-.C21 { grid-area: C21; }
+.C18 {
+  grid-area: C18;
+  background-color: var(--main-text-color);
+}
 
-.C22 { grid-area: C22; }
+.C19 {
+  grid-area: C19;
+  background-color: var(--main-text-color)
+}
 
-.C23 { grid-area: C23; }
+.C20 {
+  grid-area: C20;
+  background-color: var(--offwhite)
+}
 
-.C24 { grid-area: C24; }
+.C21 {
+  grid-area: C21;
+  background-color: var(--main-text-color)
+}
+
+.C22 {
+  grid-area: C22;
+  background-color: var(--offwhite)
+}
+
+.C23 {
+  grid-area: C23;
+  background-color: var(--main-text-color)
+}
+
+.C24 {
+  grid-area: C24;
+  background-color: var(--offwhite)
+}
+
+@media screen and (min-width: 1281px) {
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.7vw;
+  }
+  
+  .logo img {
+    width: 6.25vw;
+    height: auto;
+  }
+  
+  .logo h1 {
+    font-family: 'Leckerli One';
+    color: var(--main-text-color);
+    font-size: 2.5vw;
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 10px 20px;
+    /* Adds padding */
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+  }
+
+  .navlinks {
+    gap: 5vw;
+    /* Adds space between items */
+    list-style: none;
+    /* Removes bullet points */
+  }
+
+  ul.navlinks a {
+    font-size: 3vw;
+    gap: 1.5vw;
+  }
+
+  .logo {
+    gap: 3vw;
+    /* Adds spacing between logo and text */
+  }
+
+  .logo img {
+    width: 90px;
+    /* Adjust size as needed */
+    height: auto;
+  }
+
+  .logo h1 {
+    font-family: 'Leckerli One';
+    color: var(--main-text-color);
+    font-size: 36px;
+    /* Adjust font size */
+    margin: 0;
+    /* Removes extra spacing */
+    white-space: nowrap;
+    /* Prevents text from wrapping */
+  }
+
+  .container {
+    display: grid;
+    width: 100%;
+    aspect-ratio: 3/2;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "C1 C2 C3 C4 C5 C6"
+      "C7 C8 C9 C10 C11 C12"
+      "C13 C14 C15 C16 C17 C18"
+      "C19 C20 C21 C22 C23 C24";
+  }
+
+  body {
+    min-height: 100vh;
+    position: relative;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  nav {
+    padding: 10px 20px;
+    /* Adds padding */
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+  }
+
+  ul.navlinks a {
+    font-size: 5vw;
+    gap: 1.5vw;
+  }
+
+  .navlinks {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
