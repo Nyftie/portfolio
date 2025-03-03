@@ -31,6 +31,17 @@
   font-weight: bold;
 }
 
+html, body {
+  height: 100%; /* Ensures full page height */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1; /* Pushes footer to the bottom */
+}
+
 .btn {
   display: inline-block;
   padding: 20px 50px;
@@ -63,16 +74,33 @@ a:hover {
   color: var(--ochre);
 }
 
-h1 {
-  font-family: 'Leckerli One';
-  color: var(--main-text-color);
+nav {
+  display: flex;
+  justify-content: space-between; /* Pushes logo left, links right */
+  align-items: center; /* Aligns items vertically */
+  padding: 10px 20px; /* Adds padding */
+}
 
+.navlinks {
+  display: flex;
+  gap: 20px; /* Adds space between items */
+  list-style: none; /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.navlinks li {
+  display: flex;
+  align-items: center; /* Aligns icons and text */
 }
 
 ul.navlinks a {
   text-decoration: none;
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
+  display: flex;
+  align-items: center;
+  gap: 5px; 
   font-family: 'Quicksand';
   font-weight: bold;
   color: var(--main-text-color);
@@ -106,6 +134,26 @@ ul.navlinks a:hover {
 
 .navlinks li a:hover img {
   animation: spinAndPulsate 1.5s ease-in-out infinite;
+}
+
+.logo {
+  display: flex;
+  align-items: center;  /* Aligns items vertically */
+  text-decoration: none; /* Removes default underline */
+  gap: 10px;  /* Adds spacing between logo and text */
+}
+
+.logo img {
+  width: 90px;  /* Adjust size as needed */
+  height: auto;
+}
+
+.logo h1 {
+  font-family: 'Leckerli One';
+  color: var(--main-text-color);
+  font-size: 36px;  /* Adjust font size */
+  margin: 0; /* Removes extra spacing */
+  white-space: nowrap; /* Prevents text from wrapping */
 }
 
 .footer {
@@ -147,7 +195,7 @@ ul.navlinks a:hover {
   flex-direction: column;
   align-items: center;
   gap: -150px;
- 
+
   height: auto; /* Maintains aspect ratio */
 }
 
